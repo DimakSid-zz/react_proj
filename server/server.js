@@ -52,38 +52,6 @@ router.route('/students')
         //    res.json(users);
         //});
 
-        /*Users.find({'rank': '1'}, "_id name").lean().exec(function(err, users) {
-            if (err)
-                res.send(err);
-
-            //users = users.map(function(user) {
-            //    var query = Links.find({ from: user._id });
-            //    user = query.exac(function(err, links) {
-            //        user['imports'] = links;
-            //        return user;
-            //    });
-            //    console.log(user);
-            //    return user;
-            //});
-
-            users.forEach(function(user, index){
-                var promise  = Links.find({ from: user._id }).exec();
-                user = promise.then(function(links) {
-                    user['imports'] = links;
-                    return user;
-                });
-                console.log(user);
-                users[index] = user;
-                //Links.find({ from: user._id }, function(err, links) {
-                //    user['imports'] = links;
-                //    console.log(user);
-                //    user.save();
-                //});
-            });
-
-            res.json(users);
-        });*/
-
         Users.find({'rank': '1'}, "_id name",function(err, users) {
             if (err)
                 res.send(err);
@@ -94,7 +62,6 @@ router.route('/students')
                     obj['imports'] = links.map(function(link){
                         return link.to
                     });
-                    console.log(obj);
                     res.write(JSON.stringify(obj));
                 });
             });
