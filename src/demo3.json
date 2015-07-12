@@ -1,0 +1,380 @@
+{
+  "name": "flare",
+  "children": [
+    {
+      "name": "analytics",
+      "children": [
+        {
+          "name": "cluster",
+          "children": [
+            {"name": "AgglomerativeCluster", "userID": 3938},
+            {"name": "CommunityStructure", "userID": 3812},
+            {"name": "HierarchicalCluster", "userID": 6714},
+            {"name": "MergeEdge", "userID": 743}
+          ]
+        },
+        {
+          "name": "graph",
+          "children": [
+            {"name": "BetweennessCentrality", "userID": 3534},
+            {"name": "LinkDistance", "userID": 5731},
+            {"name": "MaxFlowMinCut", "userID": 7840},
+            {"name": "ShortestPaths", "userID": 5914},
+            {"name": "SpanningTree", "userID": 3416}
+          ]
+        },
+        {
+          "name": "optimization",
+          "children": [
+            {"name": "AspectRatioBanker", "userID": 7074}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "animate",
+      "children": [
+        {"name": "Easing", "userID": 17010},
+        {"name": "FunctionSequence", "userID": 5842},
+        {
+          "name": "interpolate",
+          "children": [
+            {"name": "ArrayInterpolator", "userID": 1983},
+            {"name": "ColorInterpolator", "userID": 2047},
+            {"name": "DateInterpolator", "userID": 1375},
+            {"name": "Interpolator", "userID": 8746},
+            {"name": "MatrixInterpolator", "userID": 2202},
+            {"name": "NumberInterpolator", "userID": 1382},
+            {"name": "ObjectInterpolator", "userID": 1629},
+            {"name": "PointInterpolator", "userID": 1675},
+            {"name": "RectangleInterpolator", "userID": 2042}
+          ]
+        },
+        {"name": "ISchedulable", "userID": 1041},
+        {"name": "Parallel", "userID": 5176},
+        {"name": "Pause", "userID": 449},
+        {"name": "Scheduler", "userID": 5593},
+        {"name": "Sequence", "userID": 5534},
+        {"name": "Transition", "userID": 9201},
+        {"name": "Transitioner", "userID": 19975},
+        {"name": "TransitionEvent", "userID": 1116},
+        {"name": "Tween", "userID": 6006}
+      ]
+    },
+    {
+      "name": "data",
+      "children": [
+        {
+          "name": "converters",
+          "children": [
+            {"name": "Converters", "userID": 721},
+            {"name": "DelimitedTextConverter", "userID": 4294},
+            {"name": "GraphMLConverter", "userID": 9800},
+            {"name": "IDataConverter", "userID": 1314},
+            {"name": "JSONConverter", "userID": 2220}
+          ]
+        },
+        {"name": "DataField", "userID": 1759},
+        {"name": "DataSchema", "userID": 2165},
+        {"name": "DataSet", "userID": 586},
+        {"name": "DataSource", "userID": 3331},
+        {"name": "DataTable", "userID": 772},
+        {"name": "DataUtil", "userID": 3322}
+      ]
+    },
+    {
+      "name": "display",
+      "children": [
+        {"name": "DirtySprite", "userID": 8833},
+        {"name": "LineSprite", "userID": 1732},
+        {"name": "RectSprite", "userID": 3623},
+        {"name": "TextSprite", "userID": 10066}
+      ]
+    },
+    {
+      "name": "flex",
+      "children": [
+        {"name": "FlareVis", "userID": 4116}
+      ]
+    },
+    {
+      "name": "physics",
+      "children": [
+        {"name": "DragForce", "userID": 1082},
+        {"name": "GravityForce", "userID": 1336},
+        {"name": "IForce", "userID": 319},
+        {"name": "NBodyForce", "userID": 10498},
+        {"name": "Particle", "userID": 2822},
+        {"name": "Simulation", "userID": 9983},
+        {"name": "Spring", "userID": 2213},
+        {"name": "SpringForce", "userID": 1681}
+      ]
+    },
+    {
+      "name": "query",
+      "children": [
+        {"name": "AggregateExpression", "userID": 1616},
+        {"name": "And", "userID": 1027},
+        {"name": "Arithmetic", "userID": 3891},
+        {"name": "Average", "userID": 891},
+        {"name": "BinaryExpression", "userID": 2893},
+        {"name": "Comparison", "userID": 5103},
+        {"name": "CompositeExpression", "userID": 3677},
+        {"name": "Count", "userID": 781},
+        {"name": "DateUtil", "userID": 4141},
+        {"name": "Distinct", "userID": 933},
+        {"name": "Expression", "userID": 5130},
+        {"name": "ExpressionIterator", "userID": 3617},
+        {"name": "Fn", "userID": 3240},
+        {"name": "If", "userID": 2732},
+        {"name": "IsA", "userID": 2039},
+        {"name": "Literal", "userID": 1214},
+        {"name": "Match", "userID": 3748},
+        {"name": "Maximum", "userID": 843},
+        {
+          "name": "methods",
+          "children": [
+            {"name": "add", "userID": 593},
+            {"name": "and", "userID": 330},
+            {"name": "average", "userID": 287},
+            {"name": "count", "userID": 277},
+            {"name": "distinct", "userID": 292},
+            {"name": "div", "userID": 595},
+            {"name": "eq", "userID": 594},
+            {"name": "fn", "userID": 460},
+            {"name": "gt", "userID": 603},
+            {"name": "gte", "userID": 625},
+            {"name": "iff", "userID": 748},
+            {"name": "isa", "userID": 461},
+            {"name": "lt", "userID": 597},
+            {"name": "lte", "userID": 619},
+            {"name": "max", "userID": 283},
+            {"name": "min", "userID": 283},
+            {"name": "mod", "userID": 591},
+            {"name": "mul", "userID": 603},
+            {"name": "neq", "userID": 599},
+            {"name": "not", "userID": 386},
+            {"name": "or", "userID": 323},
+            {"name": "orderby", "userID": 307},
+            {"name": "range", "userID": 772},
+            {"name": "select", "userID": 296},
+            {"name": "stddev", "userID": 363},
+            {"name": "sub", "userID": 600},
+            {"name": "sum", "userID": 280},
+            {"name": "update", "userID": 307},
+            {"name": "variance", "userID": 335},
+            {"name": "where", "userID": 299},
+            {"name": "xor", "userID": 354},
+            {"name": "_", "userID": 264}
+          ]
+        },
+        {"name": "Minimum", "userID": 843},
+        {"name": "Not", "userID": 1554},
+        {"name": "Or", "userID": 970},
+        {"name": "Query", "userID": 13896},
+        {"name": "Range", "userID": 1594},
+        {"name": "StringUtil", "userID": 4130},
+        {"name": "Sum", "userID": 791},
+        {"name": "Variable", "userID": 1124},
+        {"name": "Variance", "userID": 1876},
+        {"name": "Xor", "userID": 1101}
+      ]
+    },
+    {
+      "name": "scale",
+      "children": [
+        {"name": "IScaleMap", "userID": 2105},
+        {"name": "LinearScale", "userID": 1316},
+        {"name": "LogScale", "userID": 3151},
+        {"name": "OrdinalScale", "userID": 3770},
+        {"name": "QuantileScale", "userID": 2435},
+        {"name": "QuantitativeScale", "userID": 4839},
+        {"name": "RootScale", "userID": 1756},
+        {"name": "Scale", "userID": 4268},
+        {"name": "ScaleType", "userID": 1821},
+        {"name": "TimeScale", "userID": 5833}
+      ]
+    },
+    {
+      "name": "util",
+      "children": [
+        {"name": "Arrays", "userID": 8258},
+        {"name": "Colors", "userID": 10001},
+        {"name": "Dates", "userID": 8217},
+        {"name": "Displays", "userID": 12555},
+        {"name": "Filter", "userID": 2324},
+        {"name": "Geometry", "userID": 10993},
+        {
+          "name": "heap",
+          "children": [
+            {"name": "FibonacciHeap", "userID": 9354},
+            {"name": "HeapNode", "userID": 1233}
+          ]
+        },
+        {"name": "IEvaluable", "userID": 335},
+        {"name": "IPredicate", "userID": 383},
+        {"name": "IValueProxy", "userID": 874},
+        {
+          "name": "math",
+          "children": [
+            {"name": "DenseMatrix", "userID": 3165},
+            {"name": "IMatrix", "userID": 2815},
+            {"name": "SparseMatrix", "userID": 3366}
+          ]
+        },
+        {"name": "Maths", "userID": 17705},
+        {"name": "Orientation", "userID": 1486},
+        {
+          "name": "palette",
+          "children": [
+            {"name": "ColorPalette", "userID": 6367},
+            {"name": "Palette", "userID": 1229},
+            {"name": "ShapePalette", "userID": 2059},
+            {"name": "userIDPalette", "userID": 2291}
+          ]
+        },
+        {"name": "Property", "userID": 5559},
+        {"name": "Shapes", "userID": 19118},
+        {"name": "Sort", "userID": 6887},
+        {"name": "Stats", "userID": 6557},
+        {"name": "Strings", "userID": 22026}
+      ]
+    },
+    {
+      "name": "vis",
+      "children": [
+        {
+          "name": "axis",
+          "children": [
+            {"name": "Axes", "userID": 1302},
+            {"name": "Axis", "userID": 24593},
+            {"name": "AxisGridLine", "userID": 652},
+            {"name": "AxisLabel", "userID": 636},
+            {"name": "CartesianAxes", "userID": 6703}
+          ]
+        },
+        {
+          "name": "controls",
+          "children": [
+            {"name": "AnchorControl", "userID": 2138},
+            {"name": "ClickControl", "userID": 3824},
+            {"name": "Control", "userID": 1353},
+            {"name": "ControlList", "userID": 4665},
+            {"name": "DragControl", "userID": 2649},
+            {"name": "ExpandControl", "userID": 2832},
+            {"name": "HoverControl", "userID": 4896},
+            {"name": "IControl", "userID": 763},
+            {"name": "PanZoomControl", "userID": 5222},
+            {"name": "SelectionControl", "userID": 7862},
+            {"name": "TooltipControl", "userID": 8435}
+          ]
+        },
+        {
+          "name": "data",
+          "children": [
+            {"name": "Data", "userID": 20544},
+            {"name": "DataList", "userID": 19788},
+            {"name": "DataSprite", "userID": 10349},
+            {"name": "EdgeSprite", "userID": 3301},
+            {"name": "NodeSprite", "userID": 19382},
+            {
+              "name": "render",
+              "children": [
+                {"name": "ArrowType", "userID": 698},
+                {"name": "EdgeRenderer", "userID": 5569},
+                {"name": "IRenderer", "userID": 353},
+                {"name": "ShapeRenderer", "userID": 2247}
+              ]
+            },
+            {"name": "ScaleBinding", "userID": 11275},
+            {"name": "Tree", "userID": 7147},
+            {"name": "TreeBuilder", "userID": 9930}
+          ]
+        },
+        {
+          "name": "events",
+          "children": [
+            {"name": "DataEvent", "userID": 2313},
+            {"name": "SelectionEvent", "userID": 1880},
+            {"name": "TooltipEvent", "userID": 1701},
+            {"name": "VisualizationEvent", "userID": 1117}
+          ]
+        },
+        {
+          "name": "legend",
+          "children": [
+            {"name": "Legend", "userID": 20859},
+            {"name": "LegendItem", "userID": 4614},
+            {"name": "LegendRange", "userID": 10530}
+          ]
+        },
+        {
+          "name": "operator",
+          "children": [
+            {
+              "name": "distortion",
+              "children": [
+                {"name": "BifocalDistortion", "userID": 4461},
+                {"name": "Distortion", "userID": 6314},
+                {"name": "FisheyeDistortion", "userID": 3444}
+              ]
+            },
+            {
+              "name": "encoder",
+              "children": [
+                {"name": "ColorEncoder", "userID": 3179},
+                {"name": "Encoder", "userID": 4060},
+                {"name": "PropertyEncoder", "userID": 4138},
+                {"name": "ShapeEncoder", "userID": 1690},
+                {"name": "userIDEncoder", "userID": 1830}
+              ]
+            },
+            {
+              "name": "filter",
+              "children": [
+                {"name": "FisheyeTreeFilter", "userID": 5219},
+                {"name": "GraphDistanceFilter", "userID": 3165},
+                {"name": "VisibilityFilter", "userID": 3509}
+              ]
+            },
+            {"name": "IOperator", "userID": 1286},
+            {
+              "name": "label",
+              "children": [
+                {"name": "Labeler", "userID": 9956},
+                {"name": "RadialLabeler", "userID": 3899},
+                {"name": "StackedAreaLabeler", "userID": 3202}
+              ]
+            },
+            {
+              "name": "layout",
+              "children": [
+                {"name": "AxisLayout", "userID": 6725},
+                {"name": "BundledEdgeRouter", "userID": 3727},
+                {"name": "CircleLayout", "userID": 9317},
+                {"name": "CirclePackingLayout", "userID": 12003},
+                {"name": "DendrogramLayout", "userID": 4853},
+                {"name": "ForceDirectedLayout", "userID": 8411},
+                {"name": "IcicleTreeLayout", "userID": 4864},
+                {"name": "IndentedTreeLayout", "userID": 3174},
+                {"name": "Layout", "userID": 7881},
+                {"name": "NodeLinkTreeLayout", "userID": 12870},
+                {"name": "PieLayout", "userID": 2728},
+                {"name": "RadialTreeLayout", "userID": 12348},
+                {"name": "RandomLayout", "userID": 870},
+                {"name": "StackedAreaLayout", "userID": 9121},
+                {"name": "TreeMapLayout", "userID": 9191}
+              ]
+            },
+            {"name": "Operator", "userID": 2490},
+            {"name": "OperatorList", "userID": 5248},
+            {"name": "OperatorSequence", "userID": 4190},
+            {"name": "OperatorSwitch", "userID": 2581},
+            {"name": "SortOperator", "userID": 2023}
+          ]
+        },
+        {"name": "Visualization", "userID": 16540}
+      ]
+    }
+  ]
+}

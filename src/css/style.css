@@ -1,0 +1,89 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+html{
+    font:14px normal Arial, sans-serif;
+    color:#626771;
+    background-color:#fff;
+}
+
+body{
+    padding:60px;
+    text-align: center;
+}
+
+ul{
+    list-style:none;
+    display: inline-block;
+}
+
+ul li{
+    padding: 10px 20px;
+    cursor:pointer;
+    background-color:#eee;
+    color:#7B8585;
+
+    transition:0.3s;
+}
+
+ul li:hover{
+    background-color:#beecea;
+}
+
+ul li.focused{
+    color:#fff;
+    background-color:#41c7c2;
+}
+
+p{
+    padding-top:15px;
+    font-size:12px;
+}
+
+.sideMenu{
+    width: 30%;
+    float: left;
+}
+
+.graphSide{
+    width: 70%;
+    float: right;
+}
+
+.bundle_node {
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
+
+.bundle_link {
+    stroke: steelblue;
+    stroke-opacity: .4;
+    fill: none;
+}
+
+.radial_tree_node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.radial_tree_node {
+    font: 10px sans-serif;
+}
+
+.radial_tree_link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+
+.navButton{
+    padding: 10px 20px;
+    background-color:#eee;
+    color:#7B8585;
+    border: none;
+    cursor:pointer;
+    float: left;
+}
