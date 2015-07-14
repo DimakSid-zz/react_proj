@@ -9,17 +9,17 @@ mongoose.connect('mongodb://admin:admin@ds033601.mongolab.com:33601/react_proj')
 //var Link     = require('./app/models/links');
 
 var LinksSchema   = new Schema({
-    from: String,
-    to: String
+    from:   [{ type: Schema.Types.ObjectId, ref: 'users' }],
+    to:     [{ type: Schema.Types.ObjectId, ref: 'users' }]
 });
 
 var UsersSchema   = new Schema({
     name: String,
-    imports: Array
+    links: [{ type: Schema.Types.ObjectId, ref: 'links' }]
 });
 
-Users = mongoose.model('Users', UsersSchema);
-Links = mongoose.model('Links', LinksSchema);
+Users = mongoose.model('users', UsersSchema);
+Links = mongoose.model('links', LinksSchema);
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -36,6 +36,10 @@ var router = express.Router();              // get an instance of the express Ro
 router.use(function(req, res, next) {
     // do logging
     console.log('Something is happening.');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
     next(); // make sure we go to the next routes and don't stop here
 });
 
@@ -45,36 +49,32 @@ router.get('/', function(req, res) {
 
 router.route('/students')
     .get(function(req, res) {
-        //Users.find({'rank': '1'}, "_id name").populate('imports.from').exec(function(err, users) {
-        //    if (err)
-        //        res.send(err);
-        //
-        //    res.json(users);
-        //});
-
-        Users.find({'rank': '1'}, "_id name",function(err, users) {
+        Users.find({'rank': '1'}, "name links").populate('links','to').lean().exec(function(err, ret_users) {
             if (err)
                 res.send(err);
 
-            users.forEach(function(user, index){
-                Links.find({ from: user._id }, function(err, links) {
-                    var obj = user.toObject();
-                    obj['imports'] = links.map(function(link){
-                        return link.to
-                    });
-                    res.write(JSON.stringify(obj));
+            Users.populate(ret_users, { path: 'links.to', select: 'name', model: 'users'}, function (err, users) {
+                var ret = [];
+                users.forEach(function(user, uindex){
+                    user.userID = user['_id'];
+                    delete user['_id'];
+                    var links_arr = [];
+                    if (user.links){
+                        user.links.forEach(function(link, lindex){
+                            links_arr.push(link.to.name);
+                        });
+                    }
+                    user.links = links_arr;
+                    ret.push(user);
                 });
+                res.json(ret);
             });
-
-            //res.end();
         });
-
-        setTimeout(function(){res.end();}, 1000); // IM SORRY, THERE IS NO TIME
     });
 
 router.route('/users/:user_id')
     .get(function(req, res) {
-        User.findById(req.params.user_id, function(err, user) {
+        Users.findById(req.params.user_id, function(err, user) {
             if (err)
                 res.send(err);
             res.json(user);

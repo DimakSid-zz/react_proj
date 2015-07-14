@@ -77,7 +77,7 @@ var BundleGraph = React.createClass({
                     return d.key;
                 })
                 .on("click", function(d,i) {
-                    component.props.changeGraphType(nodeConnections_graph_index , {userID: d.value});
+                    component.props.changeGraphType(nodeConnections_graph_index , {userID: d.userID});
                 });
         });
 
@@ -120,7 +120,7 @@ var BundleGraph = React.createClass({
 
             // For each import, construct a link from the source to target node.
             nodes.forEach(function(d) {
-                if (d.imports) d.imports.forEach(function(i) {
+                if (d.links) d.links.forEach(function(i) {
                     imports.push({source: map[d.name], target: map[i]});
                 });
             });

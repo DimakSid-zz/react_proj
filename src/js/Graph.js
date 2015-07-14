@@ -43,12 +43,20 @@ var Graph = React.createClass({
         });
 
         var graphComponent = null;
-
+        var graphName = Object.keys(Config.graphs)[this.state.selectedGraph];
         var graphConfig = Config.graphs[ Object.keys(Config.graphs)[this.state.selectedGraph] ];
         var graph = graphConfig.defaultGraphModule;
 
-        switch (this.state.selectedGraph){
-           default:
+        switch (graphName){
+            case 'nodeConnections':
+                if (this.state.graphParams.userID) {
+                    graphComponent = React.createElement(graph, {
+                        sourceUrl: graphConfig.sourceUrl.concat(this.state.graphParams.userID),
+                        changeGraphType: this.changeGraphType
+                    });
+                }
+                break;
+            default:
                graphComponent = React.createElement(graph, { sourceUrl: graphConfig.sourceUrl, changeGraphType: this.changeGraphType});
                 break;
         }
